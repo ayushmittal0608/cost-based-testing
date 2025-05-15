@@ -1,7 +1,16 @@
-import aws from 'aws-sdk';
+import { CostExplorerClient } from "@aws-sdk/client-cost-explorer";
 
-aws.config.update({
-    region: "us-east-1",
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET-ACCESS_KEY
-});
+try {
+    const client = new CostExplorerClient({
+        region: "us-east-1",
+        credentials: {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+        }
+    });
+
+    console.log("Client information fetched");
+} catch (error) {
+    console.error("Error creating Cost Explorer client:", error);
+}
+

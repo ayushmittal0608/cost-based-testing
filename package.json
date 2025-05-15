@@ -1,6 +1,7 @@
 {
   "name": "cost-based-testing",
   "version": "1.0.0",
+  "type": "module",
   "description": "To test cost based APIs",
   "main": "index.js",
   "scripts": {
@@ -9,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-cost-explorer": "^3.810.0",
     "aws-sdk": "^2.1692.0"
   }
 }
