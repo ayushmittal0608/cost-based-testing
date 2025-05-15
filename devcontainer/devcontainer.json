@@ -1,0 +1,6 @@
+{
+  "name": "Node.js Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+  "features": {},
+  "postCreateCommand": "npm install"
+}
